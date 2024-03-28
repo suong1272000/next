@@ -1,10 +1,11 @@
 import Link from "next/link";
 
-export default function Home() {
-	return (
-		<main>
-			<div>Hello next.js!</div>
-			<Link href="/megastudy/frontEnd">프론트엔드 반으로 가기</Link>
-		</main>
-	);
-}
+const Home = () => {
+    return (
+        <main>
+            <div>hello next.js!</div>
+            <Link href={"/megastudy/frontend"}>프엔반 가기 😋</Link>
+        </main>
+    );
+};
+export default Home;
