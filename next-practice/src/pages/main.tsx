@@ -1,7 +1,11 @@
 import { GetServerSideProps } from "next";
+import { parse } from "cookie";
 import { FC } from "react";
 export const getServerSideProps: GetServerSideProps = async (context): Promise<any> => {
-    const userAuth = false;
+    const { req } = context;
+    const cookies = req.headers.cookie ? parse(req.headers.cookie) : {};
+    console.log(cookies.success)
+    const userAuth = cookies.success == "true";
     if(!userAuth){
         return{
             redirect:{
