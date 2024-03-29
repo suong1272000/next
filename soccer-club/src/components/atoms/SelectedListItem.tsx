@@ -22,7 +22,6 @@ const SelectedListItem = () => {
 				sx={{
 					width: "100%",
 					maxWidth: 360,
-					height: "100%",
 					bgcolor: "background.paper",
 				}}
 				component="nav"

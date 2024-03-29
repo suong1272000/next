@@ -1,15 +1,28 @@
 import SelectedListItem from "@/components/atoms/SelectedListItem";
-import { Layout } from "@/styles/Layout";
 import { ReactNode } from "react";
+import styled from "styled-components";
+import Registry from './registry';
+
 type LayoutProps = {
 	children: ReactNode;
 };
 const DefaultLayout = ({ children }: LayoutProps) => {
+	const PageStyle = styled.div`
+    width: 100%;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 584px;
+`
 	return (
-		<Layout>
+		<Registry>
+		<div style={{display:"flex"}}>
 			<SelectedListItem />
-			<div>{children}</div>
-		</Layout>
+			<PageStyle>{children}</PageStyle>
+		</div>
+		</Registry>
+
 	);
 };
 export default DefaultLayout;

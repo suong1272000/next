@@ -2,6 +2,7 @@ import { AppProps } from "next/app";
 import DefaultLayout from "./defaultLayout";
 import { Component } from "react";
 import Login from "./login";
+
 function MyApp({ Component, pageProps }: AppProps) {
 	const isLoginPage = Component === Login;
 	return (
