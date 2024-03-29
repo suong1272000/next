@@ -6,7 +6,6 @@ import ListSubheader from "@mui/material/ListSubheader";
 import Collapse from "@mui/material/Collapse";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
-import { Link } from "react-router-dom";
 import { useRouter } from "next/router";
 
 const SelectedListItem = () => {
@@ -23,6 +22,7 @@ const SelectedListItem = () => {
 				sx={{
 					width: "100%",
 					maxWidth: 360,
+					height: "100%",
 					bgcolor: "background.paper",
 				}}
 				component="nav"

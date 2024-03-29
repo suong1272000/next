@@ -1,8 +1,6 @@
 import { GetServerSideProps } from "next";
 import { parse } from "cookie";
 import * as React from "react";
-import { Router } from "react-router-dom";
-import { Switch } from "@mui/material";
 
 export const getServerSideProps: GetServerSideProps = async (
 	context
