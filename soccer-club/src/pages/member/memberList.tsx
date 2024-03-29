@@ -44,7 +44,7 @@ const MemberList = ({ userItem }:any) => {
 		{userItem.map((user:any) => (
                         <ListItem key={user.id} disablePadding>
                             <ListItemButton onClick={() => handleClick(user.id)}>
-                                <ListItemText primary={`${user.name} - ${user.email}`} />
+                                <ListItemText primary={`${user.name}`} />
                             </ListItemButton>
                         </ListItem>
                     ))}
