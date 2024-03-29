@@ -1,3 +1,4 @@
+import { userItem, userItemType } from "@/data/user";
 import { GetServerSideProps } from "next";
 import { useRouter } from "next/router";
 import { FC } from "react";
@@ -6,23 +7,23 @@ export const getServerSideProps: GetServerSideProps = async (
 	context
 ): Promise<{ props: any }> => {
 	const id = context.params?.id;
-	const item = shoesItem.find((v) => v.id === id);
+	const item = userItem.find((v) => v.id === id);
 	return {
-		props: { shoesItem: item },
+		props: { userItem: item },
 	};
 };
 
-type ShoesProps = {
-	shoesItem: shoesItemType;
+type UserProps = {
+	userItem: userItemType;
 };
 
-const Shoes: FC<ShoesProps> = ({ shoesItem }) => {
+const Users: FC<UserProps> = ({ userItem }) => {
 	const router = useRouter();
 	const { id } = router.query;
 	return (
 		<div>
-			선택한 신발 이름: {shoesItem.name} 가격:{shoesItem.price}
+			이름: {userItem.name} 이메일:{userItem.email}
 		</div>
 	);
 };
-export default Shoes;
+export default Users;

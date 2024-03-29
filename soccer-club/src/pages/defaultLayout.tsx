@@ -8,8 +8,7 @@ type LayoutProps = {
 };
 const DefaultLayout = ({ children }: LayoutProps) => {
 	const PageStyle = styled.div`
-    width: 100%;
-    border: 2px solid black;
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
