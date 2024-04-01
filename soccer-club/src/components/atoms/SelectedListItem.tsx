@@ -20,8 +20,8 @@ const SelectedListItem = () => {
 		<>
 			<List
 				sx={{
-					width: "100%",
-					maxWidth: 360,
+					width: "240px",
+					maxWidth: 240,
 					bgcolor: "background.paper",
 				}}
 				component="nav"

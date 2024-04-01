@@ -10,25 +10,13 @@ import {
 	BottomNavigation,
 	BottomNavigationAction,
 } from "@mui/material";
-import RestoreIcon from "@mui/icons-material/Restore";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
+import { checkCookie } from "@/middleware";
 
 export const getServerSideProps: GetServerSideProps = async (
 	context
 ): Promise<any> => {
 	const { req } = context;
-	const cookies = req.headers.cookie ? parse(req.headers.cookie) : {};
-	console.log(cookies.success);
-	const userAuth = cookies.success == "true";
-	if (!userAuth) {
-		return {
-			redirect: {
-				destination: "/login",
-			},
-		};
-	}
-
+	checkCookie(req);
 	return {
 		props: {},
 	};
